@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
         backgroundSize: "cover",
         backgroundPosition: "right",
       }}
-      className="min-h-[80dvh]  flex items-center justify-start "
+      className="min-h-[80vh]  flex items-center justify-start "
     >
       <Container maxWidth={"xl"}>
         <div className="flex flex-col items-start md:items-center justify-center md:justify-center gap-6 text-white ">
