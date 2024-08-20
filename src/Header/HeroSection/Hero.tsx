@@ -17,20 +17,20 @@ const Hero: React.FC = () => {
         backgroundSize: "cover",
         backgroundPosition: "right",
       }}
-      className="min-h-[90vh] flex items-center justify-start "
+      className=" min-h-[80vh] flex items-center justify-start "
     >
       <Container maxWidth={"xl"}>
         <div className="flex flex-col items-start md:items-center justify-center md:justify-center gap-6 text-white ">
-          <p className="text-sm font-mono opacity-80">
+          <p className="text-sm font-mono opacity-75">
             {" "}
             Festive season offers ongoing
           </p>
-          <div className="flex flex-col text-[3rem] md:text-[4rem] font-serif">
+          <div className="flex flex-col text-[32px] md:text-[4rem] font-serif">
             <span className="">Your all in one</span>
             <span className="">clothing solution!</span>
           </div>
 
-          <div className="w-full max-w-[250px] text-xl">
+          <div className="w-full max-w-[200px] md:max-w-[250px] text-xl">
             <ButtonComp
               label="View Products"
               onClick={() => showProducts()}
