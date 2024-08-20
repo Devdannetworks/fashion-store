@@ -37,7 +37,7 @@ const SuccessCheckout = () => {
       } else {
         console.error("User not authenticated");
       }
-      setLoading(false); // Hide loading state once auth is checked
+      setLoading(false);
     });
 
     // Clean up the auth state listener when the component unmounts
@@ -51,8 +51,6 @@ const SuccessCheckout = () => {
         paymentStatus: "paid",
         updatedAt: Timestamp.now(),
       });
-
-      console.log(`Order ${orderId} updated to paid.`);
     } catch (error) {
       console.error("Error updating order status", error);
     }

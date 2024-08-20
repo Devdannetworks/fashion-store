@@ -3,7 +3,7 @@ import heroImage1 from "../Images/demo-home-fashion-slider-01.webp";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import ButtonComp from "../../Components/Button";
-import { GrLinkNext } from "react-icons/gr";
+import { GrFormNextLink, GrLinkNext } from "react-icons/gr";
 
 const Hero: React.FC = () => {
   const navigate = useNavigate();
@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
             {" "}
             Festive season offers ongoing
           </p>
-          <div className="flex flex-col text-[26px] sm:text-[32px] md:text-[4rem] font-serif">
+          <div className="flex flex-col text-[28px] sm:text-[32px] md:text-[4rem] font-mono ">
             <span className="">Your all in one</span>
             <span className="">clothing solution!</span>
           </div>
@@ -36,7 +36,7 @@ const Hero: React.FC = () => {
               onClick={() => showProducts()}
               outline
               custom
-              iconFront={GrLinkNext}
+              iconFront={GrFormNextLink}
             />
           </div>
         </div>
