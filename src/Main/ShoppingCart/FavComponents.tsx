@@ -19,7 +19,7 @@ const FavProducts: React.FC = () => {
   return (
     <div className="flex flex-col  min-h-screen">
       <Container className="flex-grow  min-w-full">
-        {favItems && favItems.length < 1 ? (
+        {favItems === null || favItems.length < 1 ? (
           <div>
             <Empty
               heading="Ooops! Your wishlist is empty!"
