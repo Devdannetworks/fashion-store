@@ -56,14 +56,6 @@ const AddRating: React.FC<AddRatingProps> = ({ product }) => {
     },
   });
 
-  useEffect(() => {
-    const unSubscribe = auth.onAuthStateChanged((user) => {
-      setUserId(user?.uid);
-    });
-
-    return () => unSubscribe();
-  }, [userId]);
-
   const setCustomValue = (id: string, value: any) => {
     setValue(id, value, {
       shouldDirty: true,
@@ -71,14 +63,6 @@ const AddRating: React.FC<AddRatingProps> = ({ product }) => {
       shouldValidate: true,
     });
   };
-
-  useEffect(() => {
-    const unSubscribe = auth.onAuthStateChanged((user) => {
-      //   setCurrentUser(user);
-    });
-
-    return () => unSubscribe();
-  }, []);
 
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     setLoading(true);
@@ -100,9 +84,9 @@ const AddRating: React.FC<AddRatingProps> = ({ product }) => {
       (order: any) =>
         order.userId === currentUser.uid && order.deliveryStatus === "delivered"
     );
-    if (productIs) {
+    if (!productIs) {
       toast("Can only review delivered products!");
-      setLoading(false);
+      return setLoading(false);
     }
 
     const review = reviews.find((review) => review.userId === currentUser.uid);
