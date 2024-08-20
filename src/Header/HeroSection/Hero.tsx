@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
         backgroundSize: "cover",
         backgroundPosition: "right",
       }}
-      className=" min-h-[80vh] flex items-center justify-start "
+      className="min-h-[90vh] flex items-center justify-start "
     >
       <Container maxWidth={"xl"}>
         <div className="flex flex-col items-start md:items-center justify-center md:justify-center gap-6 text-white ">
@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
             {" "}
             Festive season offers ongoing
           </p>
-          <div className="flex flex-col text-[32px] md:text-[4rem] font-serif">
+          <div className="flex flex-col text-[3rem] md:text-[4rem] font-serif">
             <span className="">Your all in one</span>
             <span className="">clothing solution!</span>
           </div>
