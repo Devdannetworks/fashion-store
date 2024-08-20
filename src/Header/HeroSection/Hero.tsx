@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
             {" "}
             Festive season offers ongoing
           </p>
-          <div className="flex flex-col text-[32px] md:text-[4rem] font-serif">
+          <div className="flex flex-col text-[26px] sm:text-[32px] md:text-[4rem] font-serif">
             <span className="">Your all in one</span>
             <span className="">clothing solution!</span>
           </div>
