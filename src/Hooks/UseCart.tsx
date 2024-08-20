@@ -124,7 +124,8 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
         if (existingIndex > -1) {
           updatedCart[existingIndex].quantity = ++updatedCart[existingIndex]
             .quantity;
-          updatedCart[existingIndex].itemTotal +=
+          updatedCart[existingIndex].itemTotal =
+            updatedCart[existingIndex].quantity *
             updatedCart[existingIndex].price;
         }
         setCartItems(updatedCart);
@@ -149,7 +150,9 @@ export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
           updatedCartItems[existingProductIndex].quantity = --updatedCartItems[
             existingProductIndex
           ].quantity;
-          updatedCartItems[existingProductIndex].itemTotal -=
+
+          updatedCartItems[existingProductIndex].itemTotal =
+            updatedCartItems[existingProductIndex].quantity *
             updatedCartItems[existingProductIndex].price;
         }
         setCartItems(updatedCartItems);

@@ -32,7 +32,7 @@ export const CreateCheckoutSession = async (products: cartProductsType[]) => {
     const lineItems = products.map((product) => ({
       quantity: product.quantity,
       price_data: {
-        currency: "ksh",
+        currency: "kes",
         product_data: {
           name: product.name,
           description: product.description,

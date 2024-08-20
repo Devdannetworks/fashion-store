@@ -27,6 +27,7 @@ const CartClient: React.FC = () => {
       return toast.error("Log in to make a checkout");
     }
     if (cartItems) {
+      setLoading(true);
       try {
         toast("please wait redirecting to checkout!");
         await CreateCheckoutSession(cartItems);
