@@ -2,6 +2,7 @@ import React from "react";
 import { Categories } from "../../Utils/Categoriies";
 import EachCategory from "./EachCategory";
 import { useSearchParams } from "react-router-dom";
+import { Container } from "@mui/material";
 
 const CategoriesPage = () => {
   const [params] = useSearchParams();
@@ -10,7 +11,7 @@ const CategoriesPage = () => {
   console.log(category);
 
   return (
-    <div className="bg-white">
+    <Container maxWidth={"xl"}>
       <div className="pt-4 flex flex-row gap-4 md:gap-0 items-center justify-between overflow-x-scroll scrollbar-hide">
         {Categories.map((item) => {
           return (
@@ -25,7 +26,7 @@ const CategoriesPage = () => {
           );
         })}
       </div>
-    </div>
+    </Container>
   );
 };
 
