@@ -9,6 +9,7 @@ import { CiHeart, CiShoppingCart } from "react-icons/ci";
 import NavigationText from "./NavigationText";
 import CategoriesPage from "../Categories/CategoriesPage";
 import Search from "./Search";
+import ContainerCustom from "../../Components/Container";
 
 export default function PrimarySearchAppBar() {
   const { cartItems, favItems } = useCart();
@@ -33,9 +34,9 @@ export default function PrimarySearchAppBar() {
   };
 
   return (
-    <div className="sticky  bg-slate-100 left-0 right-0 top-0 z-30 py-3">
-      <Container maxWidth={"xl"}>
-        <div className="bg-slate-100 justify-between flex w-full items-center ">
+    <div className="sticky  bg-slate-100  justify-center left-0 right-0 top-0 z-30 py-3">
+      <Container className="h-full flex items-center">
+        <div className="bg-sate-800 justify-between flex w-full items-center mb-2">
           <div>
             {isDesktop ? (
               <div className="flex gap-12 items-center justify-between w-full">
@@ -48,9 +49,7 @@ export default function PrimarySearchAppBar() {
               </>
             )}
           </div>
-          <div>
-            <Search />
-          </div>
+          <Search />
 
           <div className="flex flex-row gap-5 lg:gap-8 justify-between items-center ">
             <NavIcons

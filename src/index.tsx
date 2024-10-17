@@ -6,10 +6,24 @@ import reportWebVitals from "./reportWebVitals";
 import { CartProvider } from "./Hooks/UseCart";
 import { AuthProvider } from "./Hooks/UseAuth";
 import { Toaster } from "react-hot-toast";
+import { ThemeProvider } from "@emotion/react";
+import { createTheme } from "@mui/material/styles";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
+
+const theme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 960,
+      lg: 1280,
+      xl: 1380,
+    },
+  },
+});
 root.render(
   <React.StrictMode>
     <Toaster
@@ -20,15 +34,14 @@ root.render(
         },
       }}
     ></Toaster>
-    <AuthProvider>
-      <CartProvider>
-        <App />
-      </CartProvider>
-    </AuthProvider>
+    <ThemeProvider theme={theme}>
+      <AuthProvider>
+        <CartProvider>
+          <App />
+        </CartProvider>
+      </AuthProvider>
+    </ThemeProvider>
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

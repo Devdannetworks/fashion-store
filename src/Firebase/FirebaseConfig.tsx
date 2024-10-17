@@ -6,13 +6,14 @@ import { getFunctions } from "firebase/functions";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: process.env.REACT_APP_FIREBASE_AUTHDOMAIN,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECTID,
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGEBUCKET,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGINGSENDERID,
-  appId: process.env.REACT_APP_FIREBASE_APPID,
-  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENTID,
+  apiKey: "AIzaSyC9GxaQn1ATOucd_Gmi7Ghg95FH-zVChG0",
+  authDomain: "e-commerce-app-c82d8.firebaseapp.com",
+  databaseURL: "https://e-commerce-app-c82d8-default-rtdb.firebaseio.com",
+  projectId: "e-commerce-app-c82d8",
+  storageBucket: "e-commerce-app-c82d8.appspot.com",
+  messagingSenderId: "837274214312",
+  appId: "1:837274214312:web:73f1cc7528c47ae4d4c79d",
+  measurementId: "G-EG8Q072DTP",
 };
 
 // Initialize Firebase

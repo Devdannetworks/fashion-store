@@ -8,7 +8,7 @@ import {
   getDocs,
 } from "firebase/firestore";
 import { Review } from "../../Main/Products/AddRating";
-import { auth, db } from "../../Firebase/FirebaseConfig";
+import { db } from "../../Firebase/FirebaseConfig";
 import moment from "moment";
 
 export const TruncateText = (text: string) => {
