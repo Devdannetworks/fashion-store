@@ -65,8 +65,8 @@ export default function PrimarySearchAppBar() {
             <AccountDrop />
           </div>
         </div>
+        <CategoriesPage />
       </Container>
-      <CategoriesPage />
     </div>
   );
 }
